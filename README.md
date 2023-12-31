@@ -1,2 +1,3 @@
 # Markedly
-simple md editor
+
+The simplest of simple markdown editors
