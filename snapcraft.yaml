@@ -1,18 +1,22 @@
-name: Markedly
+name: markedly
 version: '0.1.0'
 summary: A tiny, crappy, markdown editor
 description: |
   A markdeown editor that is not very good, but it works. It is written in Go and uses Fyne for the GUI.
 
+base: core18
 grade: stable
 confinement: strict
 
 apps:
-  Markedly:
-    command: Markedly
+  markedly:
+    command: markedly
 
 parts:
-  Markedly:
+  markedly:
     plugin: go
     go-importpath: github.com/TylerCode/Markedly
     source: .
+    build-packages:
+      - libx11-dev
+      - pkg-config
