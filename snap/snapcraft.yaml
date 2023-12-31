@@ -1,0 +1,47 @@
+name: markedly
+version: '0.1.0'
+summary: A tiny, crappy, markdown editor
+description: |
+  A markdeown editor that is not very good, but it works. It is written in Go and uses Fyne for the GUI.
+
+base: core18
+grade: stable
+confinement: classic # Todo: Change to strict
+
+apps:
+  markedly:
+    command: markedly
+    plugs:
+      - desktop
+      - desktop-legacy
+      - x11
+      - wayland
+      - unity7
+      - home
+      - gsettings
+      - opengl
+      - pulseaudio
+
+parts:
+  markedly:
+    plugin: go
+    go-importpath: github.com/TylerCode/Markedly
+    source: .
+    build-packages:
+      - libgl1-mesa-dev
+      - libx11-dev
+      - libxrandr-dev
+      - libxinerama-dev
+      - libxcursor-dev
+      - libxi-dev
+      - pkg-config
+      - libxrandr2 
+    stage-packages:
+      - libgl1-mesa-glx
+      - libglu1-mesa
+      - libx11-6
+      - libxrandr2
+      - libxinerama1
+      - libxcursor1
+      - libxi6
+      - libgl1-mesa-dri

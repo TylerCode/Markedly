@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Markedly
+Exec=markedly
+Icon=${SNAP}/meta/gui/icon.png
+Type=Application
+Categories=Office;
